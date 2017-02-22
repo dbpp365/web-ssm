@@ -15,7 +15,7 @@
     id <input name="id" type="text"/> <br>
     name <input name="userName" type="text"/><br>
     phone <input name="userPhone" type="text"/><br>
-    email <input name="userEmail" type="text"/><br>
+    Email <input name="userEmail" type="text"/><br>
     password <input name="userPwd" type="text"/><br>
     salt <input name="pwdSalt" type="text" /><br>
     createTime<input name="createTime" type="datetime" /><br>
