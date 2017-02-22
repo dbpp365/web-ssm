@@ -5,7 +5,7 @@
 
 </head>
 <body>
-<h2>Hello World!</h2>
+<h2>Test Web-SSM</h2>
 <h2><a href="/user/showUser">showAllUser</a></h2>
 <h2><a href="/user/findUserById">findUserById</a></h2>
 <h2><a href="/user/findUserByPhone">findUserByPhone</a></h2>
