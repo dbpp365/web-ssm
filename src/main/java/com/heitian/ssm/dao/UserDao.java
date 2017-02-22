@@ -15,8 +15,9 @@ import java.util.List;
  */
 
 @Repository
-public interface UserDao {
 
+public interface UserDao {
+    //这里的@Param（“userId”） 是指在持久层，和Mapper文件对应
     User selectUserById(@Param("userId") Long userId);
 
     User selectUserByPhoneOrEmail(@Param("phoneOrEmail") String phoneOrEmail);

@@ -16,7 +16,7 @@
 
     <select id="selectUserById" parameterType="java.lang.Long" resultMap="UserBaseMap">
         SELECT * FROM t_user
-        WHERE id = #{id}
+        WHERE id = #{userId}
     </select>
 
     <select id="selectUserByPhoneOrEmail" parameterType="string" resultMap="UserBaseMap">
@@ -35,9 +35,14 @@
 
     </update>
     <!--这里是insert-->
-    <!--<insert id="addUser" parameterMap="com.heitian.ssm.model.User" >-->
+    <!--<parameterMap id="userMap" type="com.heitian.ssm.model.User">-->
+    <!--<parameter property="id" resultMap="F_ID"/>-->
+    <!--<parameter property="name" resultMap="F_NAME"/>-->
+
+    <!--</parameterMap>-->
+    <!--<insert id="addUser" parameterType="com.heitian.ssm.model.User" >-->
         <!--INNER  into t_user(id,user_name,user_phone,user_email,user_pwd,pwd_salt,create_time,modify_time,isDelete)-->
-        <!--VALUES  (#{id},#{userName},#{userPhone},#{userPhone},#{userEmail},#{userPwd},#{pwdSalt},#{createTime},#{modifyTime},#{isDelete})-->
+    <!--VALUES  (#{user.},#{},#{userPhone},#{userPhone},#{userEmail},#{userPwd},#{pwdSalt},#{createTime},#{modifyTime},#{isDelete})-->
 
 
     <!--</insert>-->
