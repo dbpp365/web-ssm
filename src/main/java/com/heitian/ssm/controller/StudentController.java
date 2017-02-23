@@ -20,10 +20,12 @@ public class StudentController {
 
     @RequestMapping("/addStudent")
     public String addStudent(Student student) {
-
+        log.info("增加用户");
         if (studentService.addStudent(student))
             return "success";
         return "failed";
+
+
     }
 
 

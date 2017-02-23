@@ -9,7 +9,14 @@
                         http://www.springframework.org/schema/context/spring-context-4.0.xsd
                         http://www.springframework.org/schema/mvc
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+    <!-- 启动SpringMVC的注解功能-->
+    <mvc:annotation-driven/>
+    <!--&lt;!&ndash;<mvc:resources location="/" mapping="/**/*.js"/>&ndash;&gt;-->
+    <!--静态资源映射，其中mapping是映射地址，location是真实地址-->
+    <mvc:resources mapping="/**" location="/static/js/"/>
 
+
+    <!--<resources mapping="/js/**" location="/js/" />-->
     <!-- 自动扫描  @Controller-->
     <context:component-scan base-package="com.heitian.ssm.controller"/>
 
@@ -22,14 +29,17 @@
             </list>
         </property>
     </bean>
-    <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="mappingJacksonHttpMessageConverter"/> <!-- JSON转换器 -->
-            </list>
-        </property>
-    </bean>
+    <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 (旧版本)-->
+    <!--<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">-->
+    <!--<property name="messageConverters">-->
+    <!--<list>-->
+    <!--<ref bean="mappingJacksonHttpMessageConverter"/> &lt;!&ndash; JSON转换器 &ndash;&gt;-->
+    <!--</list>-->
+    <!--</property>-->
+
+    <!--<property name="order" value="1"/>-->
+    <!--</bean>-->
+    <!--<mvc:default-servlet-handle/>-->
 
 
     <!-- 定义跳转的文件的前后缀 ，视图模式配置 -->

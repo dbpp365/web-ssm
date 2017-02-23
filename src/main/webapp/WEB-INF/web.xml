@@ -40,8 +40,20 @@
     <listener>
         <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
     </listener>
-
-
+    <!--启用tomcat自带的静态资源过滤功能-->
+    <!--注意加载顺序在DispatchServlet之前-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>default</servlet-name>-->
+    <!--<url-pattern>*.jpg</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>default</servlet-name>-->
+    <!--<url-pattern>*.js</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>default</servlet-name>-->
+    <!--<url-pattern>*.css</url-pattern>-->
+    <!--</servlet-mapping>-->
     <!-- spring mvc servlet-->
     <servlet>
         <servlet-name>SpringMVC</servlet-name>

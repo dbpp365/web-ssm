@@ -10,6 +10,7 @@
 <h2><a href="/user/findUserById">findUserById</a></h2>
 <h2><a href="/user/findUserByPhone">findUserByPhone</a></h2>
 <h2><a href="/user/deleteUserById">deleteUserById</a></h2>
+<h2><a href="/print/byID">checkMyInfo</a></h2>
 <div style="width: 500px;height: 600px;border: #ff1524 solid 2px; align-content: center ;margin-left: 30%">
 <form method="post" name="user" action="/user/addUser">
     id <input name="id" type="text"/> <br>
